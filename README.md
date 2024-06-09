@@ -17,9 +17,8 @@ This project aims to create an intelligent real-time surveillance system that de
 
 The system has been tested with various video inputs to ensure accurate detection and timely notifications. A sample Images is included for demonstration purposes. The system successfully detects humans and specified animals, sends email alerts, and logs the events in an Excel file.
 ![Sample Image 1](images/photo1.png)
-![Sample Image 1](images/photo2.png)
-
-
+![Sample Image 2](images/photo2.png)
+![Sample Image 3](images/photo5.png)
 
 ## Setup and Installation
 
