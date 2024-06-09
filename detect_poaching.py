@@ -1,4 +1,4 @@
-import cv2
+oimport cv2
 import smtplib
 import os
 from datetime import datetime
@@ -10,10 +10,8 @@ from email.mime.text import MIMEText
 from email import encoders
 
 def Camera():
-    # video_file_path = '5.webm'
-    video_file_path = '7.mp4'
+    video_file_path = 'video.mp4'
     cam = cv2.VideoCapture(video_file_path)
-    # cam = cv2.VideoCapture(0)
 
     classNames = []
     classFile = 'coco.names'
