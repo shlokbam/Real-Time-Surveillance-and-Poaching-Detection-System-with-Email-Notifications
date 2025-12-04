@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Dashboard - WildGuard AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="topnav">
+        <div class="nav-left">
+            <a href="/" class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">WildGuard AI</span>
+            </a>
+        </div>
+        <div class="nav-center">
+            <span class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                <span id="statusText">Standby</span>
+            </span>
+        </div>
+        <div class="nav-right">
+            <a href="/" class="btn-back">← Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Main Grid -->
+        <div class="dashboard-grid">
+            <!-- Control Panel -->
+            <div class="card control-card">
+                <div class="card-header">
+                    <h2>🎮 Control Panel</h2>
+                </div>
+                
+                <div class="control-section">
+                    <h3>📹 Video Upload</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="videoInput" accept="video/*" hidden>
+                        <div class="upload-icon">📁</div>
+                        <p id="uploadText">Click or drag video here</p>
+                        <span class="upload-info">MP4, AVI, MOV, WEBM, MKV</span>
+                    </div>
+                    <button class="btn btn-primary" id="uploadBtn" disabled>
+                        <span>🚀</span> Start Detection
+                    </button>
+                </div>
+
+                <div class="divider">OR</div>
+
+                <div class="control-section">
+                    <h3>📷 Live Camera</h3>
+                    <button class="btn btn-success" id="startCameraBtn">
+                        <span>📹</span> Start Live Camera
+                    </button>
+                </div>
+
+                <div class="control-section">
+                    <button class="btn btn-danger" id="stopBtn" disabled>
+                        <span>⏹️</span> Stop Detection
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Feed -->
+            <div class="card feed-card">
+                <div class="card-header">
+                    <h2>📺 Live Detection Feed</h2>
+                    <div class="fps-badge" id="fpsBadge">0 FPS</div>
+                </div>
+                
+                <div class="video-container" id="videoContainer">
+                    <div class="placeholder" id="placeholder">
+                        <div class="placeholder-icon">🎥</div>
+                        <p>No active detection</p>
+                        <span>Upload video or start camera</span>
+                    </div>
+                    <img id="videoFeed" src="" alt="Video Feed" style="display: none;">
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="card stats-card">
+                <div class="card-header">
+                    <h2>📊 Statistics</h2>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="totalDetections">0</div>
+                            <div class="stat-label">Detections</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-icon">📧</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="emailsSent">0</div>
+                            <div class="stat-label">Alerts Sent</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-box">
+                        <div class="stat-icon">🕐</div>
+                        <div class="stat-info">
+                            <div class="stat-value small" id="lastDetection">Never</div>
+                            <div class="stat-label">Last Detection</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions & Notifications -->
+            <div class="card actions-card">
+                <div class="card-header">
+                    <h2>⚡ Quick Actions</h2>
+                </div>
+                
+                <div class="actions-grid">
+                    <button class="action-btn" id="downloadBtn">
+                        <span class="action-icon">📥</span>
+                        <span>Download Report</span>
+                    </button>
+                    
+                    <button class="action-btn" id="galleryBtn">
+                        <span class="action-icon">🖼️</span>
+                        <span>View Gallery</span>
+                    </button>
+                </div>
+
+                <div class="notifications-section">
+                    <h3>🔔 Recent Alerts</h3>
+                    <div class="notification-list" id="notificationArea">
+                        <div class="no-notifications">No alerts yet</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Modal -->
+        <div class="modal" id="galleryModal">
+            <div class="modal-content gallery-modal-content">
+                <div class="modal-header">
+                    <h2>🖼️ Detected Images Gallery</h2>
+                    <button class="modal-close" id="closeGalleryBtn">✕</button>
+                </div>
+                
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-placeholder">
+                        <p>No images detected yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image View Modal -->
+        <div class="modal" id="imageModal">
+            <div class="modal-content image-modal-content">
+                <button class="modal-close" id="modalClose">✕</button>
+                <img class="modal-image" id="modalImage" src="" alt="Detection">
+                <div class="modal-footer">
+                    <div class="modal-info">
+                        <p id="modalTimestamp"></p>
+                    </div>
+                    <button class="btn btn-danger btn-sm" id="deleteImageBtn">
+                        <span>🗑️</span> Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

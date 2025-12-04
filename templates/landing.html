@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildGuard AI - Wildlife Protection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">WildGuard AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#stats">Impact</a>
+                <a href="#about">About</a>
+                <a href="/dashboard" class="btn-nav">Launch Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="badge">
+                <span class="badge-icon">⚡</span>
+                AI-Powered Wildlife Protection
+            </div>
+            <h1 class="hero-title">
+                Protecting Wildlife with
+                <span class="gradient-text">Artificial Intelligence</span>
+            </h1>
+            <p class="hero-subtitle">
+                Real-time poaching detection system using advanced computer vision and deep learning 
+                to safeguard endangered species through automated surveillance and instant alerts.
+            </p>
+            <div class="hero-buttons">
+                <a href="/dashboard" class="btn btn-primary">
+                    <span>🚀</span> Start Detection
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    <span>📖</span> Learn More
+                </a>
+            </div>
+            
+            <!-- Stats Preview -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">&lt;10s</div>
+                    <div class="stat-label">Alert Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Real-time</div>
+                    <div class="stat-label">Detection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p>Advanced AI technology for comprehensive wildlife protection</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>Real-time Video Analysis</h3>
+                    <p>Process live camera feeds and video uploads with advanced object detection algorithms to identify threats instantly.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Detection</h3>
+                    <p>Utilizes SSD MobileNet V3 deep learning model trained on thousands of images for accurate human and animal detection.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h3>Instant Email Alerts</h3>
+                    <p>Automatic email notifications with captured images and detection details sent to rangers within seconds.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Comprehensive statistics tracking detections, FPS performance, and historical data with Excel export capability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Image Gallery</h3>
+                    <p>Automatic storage and management of all detected incidents with timestamp tracking and quick access.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Easy Deployment</h3>
+                    <p>Simple setup with support for multiple camera sources, video uploads, and flexible configuration options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple 4-step process to protect wildlife</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Deploy Cameras</h3>
+                        <p>Install cameras in strategic locations across protected areas or upload existing surveillance footage.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Analysis</h3>
+                        <p>Our deep learning model continuously analyzes video feeds to detect humans and animals in real-time.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Instant Alerts</h3>
+                        <p>When suspicious activity is detected, automated alerts with images are sent immediately to rangers.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Rapid Response</h3>
+                        <p>Rangers receive detailed information to respond quickly and prevent poaching incidents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-content">
+                    <h2>Cutting-Edge Technology</h2>
+                    <p class="tech-subtitle">Built with industry-leading tools and frameworks</p>
+                    
+                    <div class="tech-features">
+                        <div class="tech-item">
+                            <span class="tech-icon">🧠</span>
+                            <div>
+                                <h4>Deep Learning Model</h4>
+                                <p>SSD MobileNet V3 trained on COCO dataset with 90+ object classes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <span class="tech-icon">🎥</span>
+                            <div>
+                                <h4>Computer Vision</h4>
+                                <p>OpenCV for real-time video processing and object detection</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <span class="tech-icon">⚡</span>
+                            <div>
+                                <h4>High Performance</h4>
+                                <p>Optimized for 25-30 FPS processing on standard hardware</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <span class="tech-icon">🌐</span>
+                            <div>
+                                <h4>Web-Based Interface</h4>
+                                <p>Flask backend with responsive HTML/CSS/JavaScript frontend</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-visual">
+                    <div class="tech-box">
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line"><span class="code-keyword">def</span> <span class="code-function">detect_poaching</span>():</div>
+                                <div class="code-line">    model = <span class="code-string">"SSD MobileNet V3"</span></div>
+                                <div class="code-line">    <span class="code-keyword">if</span> human_detected:</div>
+                                <div class="code-line">        <span class="code-function">send_alert</span>()</div>
+                                <div class="code-line">        <span class="code-function">save_evidence</span>()</div>
+                                <div class="code-line">        <span class="code-keyword">return</span> <span class="code-string">"Protected"</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section id="stats" class="impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Making an Impact</h2>
+                <p>Protecting wildlife through technology</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">🎯</div>
+                    <div class="impact-number">92%</div>
+                    <div class="impact-label">Detection Accuracy</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">⚡</div>
+                    <div class="impact-number">&lt;5s</div>
+                    <div class="impact-label">Average Alert Time</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">🌍</div>
+                    <div class="impact-number">24/7</div>
+                    <div class="impact-label">Continuous Monitoring</div>
+                </div>
+                
+                <div class="impact-card">
+                    <div class="impact-icon">📧</div>
+                    <div class="impact-number">100%</div>
+                    <div class="impact-label">Alert Delivery Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About WildGuard AI</h2>
+                <p class="about-text">
+                    WildGuard AI is an advanced wildlife protection system that leverages artificial intelligence 
+                    to combat poaching and protect endangered species. Our system provides real-time surveillance, 
+                    automated threat detection, and instant alerts to enable rapid response by wildlife rangers.
+                </p>
+                <p class="about-text">
+                    Built with state-of-the-art deep learning technology, WildGuard AI can accurately identify 
+                    humans and animals in various environments and lighting conditions. The system runs 24/7, 
+                    providing continuous protection for wildlife in remote and hard-to-monitor areas.
+                </p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <span>✓</span> Open Source & Customizable
+                    </div>
+                    <div class="about-feature">
+                        <span>✓</span> Easy to Deploy
+                    </div>
+                    <div class="about-feature">
+                        <span>✓</span> Low Hardware Requirements
+                    </div>
+                    <div class="about-feature">
+                        <span>✓</span> Scalable Solution
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Protect Wildlife?</h2>
+            <p>Start using WildGuard AI today and make a difference</p>
+            <a href="/dashboard" class="btn btn-cta">
+                <span>🚀</span> Launch Detection System
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span>WildGuard AI</span>
+                    </div>
+                    <p>AI-powered wildlife protection for a safer tomorrow</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#about">About</a>
+                    <a href="/dashboard">Dashboard</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Technology</h4>
+                    <p>Built with Python, Flask, OpenCV, and TensorFlow</p>
+                    <p>Powered by deep learning and computer vision</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 WildGuard AI. All rights reserved. | Protecting Wildlife Through Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='landing.js') }}"></script>
+</body>
+</html>
