@@ -273,7 +273,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/shlokbam)
+- GitHub: [@shlok](https://github.com/shlokbam)
 - Email: shlokbam19103@gmail.com
 - LinkedIn: [Your Profile](https://linkedin.com/in/shlokbam)
 
