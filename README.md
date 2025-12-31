@@ -273,9 +273,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [@yourusername](https://github.com/shlokbam)
+- Email: shlokbam19103@gmail.com
+- LinkedIn: [Your Profile](https://linkedin.com/in/shlokbam)
 
 ## 🙏 Acknowledgments
 
@@ -287,9 +287,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 Having issues? Here's how to get help:
-- 📧 Email: your.email@example.com
-- 🐛 [Report Bug](https://github.com/yourusername/wildguard-ai/issues)
-- 💡 [Request Feature](https://github.com/yourusername/wildguard-ai/issues)
+- 📧 Email: shlokbam19103@gmail.com
+- 🐛 [Report Bug](https://github.com/shlokbam/wildguard-ai/issues)
+- 💡 [Request Feature](https://github.com/shlokbam/wildguard-ai/issues)
 
 ## 📸 Screenshots
 
@@ -312,7 +312,5 @@ Having issues? Here's how to get help:
 **Made with ❤️ for Wildlife Conservation**
 
 ⭐ Star this repo if you find it helpful!
-
-[Demo](https://your-demo-link.com) • [Report Bug](https://github.com/yourusername/wildguard-ai/issues) • [Request Feature](https://github.com/yourusername/wildguard-ai/issues)
 
 </div>
