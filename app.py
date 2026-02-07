@@ -17,6 +17,9 @@ import threading
 import time
 import queue
 
+import os
+IS_CLOUD = True
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024
@@ -357,18 +360,14 @@ def upload_video():
     
     return jsonify({'success': False, 'message': 'Invalid file format'})
 
-@app.route('/start_camera', methods=['POST'])
+@app.route("/start_camera", methods=["POST"])
 def start_camera():
-    global detection_active, camera_active
-    
-    detection_active = True
-    camera_active = True
-    
-    thread = threading.Thread(target=process_detection, args=(0,))
-    thread.daemon = True
-    thread.start()
-    
-    return jsonify({'success': True, 'message': 'Camera started'})
+    if IS_CLOUD:
+        return jsonify({
+            "success": False,
+            "message": "Live camera not supported in cloud deployment"
+        })
+
 
 @app.route('/stop_detection', methods=['POST'])
 def stop_detection():
@@ -429,5 +428,5 @@ def delete_image(filename):
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)})
 
-if __name__ == '__main__':
-    app.run(debug=True, threaded=True, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
