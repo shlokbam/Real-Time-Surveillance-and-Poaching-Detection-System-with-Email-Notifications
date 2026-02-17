@@ -7,7 +7,7 @@
 
 > AI-powered real-time poaching detection system using computer vision and deep learning to protect endangered wildlife through automated surveillance and instant alerts.
 
-## 🌟 Overview
+## 🌟 Overview 
 
 WildGuard AI is an advanced wildlife protection system that leverages artificial intelligence and computer vision to combat poaching in real-time. The system processes live camera feeds and video uploads to detect suspicious human activity near wildlife, automatically alerting rangers with captured evidence within seconds.
 
